@@ -4,15 +4,15 @@
     <div class="card">
       <div class="card-header">LOGIN</div>
       <div class="card-body">
-          <form>
+          <form #userLog="ngForm" (ngSubmit) = "onLogin(userLog.value)">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel>
+                <small id="emailHelp" name="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" name="passwd" class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
