@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   onRegister(userReg){
     this.userService.studentReg(userReg).subscribe(
       () => {
-        console.log('arived');
+        console.log('arrived');
         alert("Registered!!!!")
       }
     )
